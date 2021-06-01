@@ -1,0 +1,21 @@
+.header {
+  width: 100%;
+  /*padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 16px;
+  padding-top: 16px;*/
+  padding: 1rem 1.5rem;
+
+  background-color: var(--primary-color);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px){
+  .header{
+    justify-content: center;
+  }
+}
