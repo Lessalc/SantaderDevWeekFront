@@ -1,8 +1,7 @@
 <div class="page-container">
-  <app-stock-card></app-stock-card>
-  <app-stock-card></app-stock-card>
-  <app-stock-card></app-stock-card>
-  <app-stock-card></app-stock-card>
-  <app-stock-card></app-stock-card>
-  <app-stock-card></app-stock-card>
+  <app-stock-card *ngFor="let acao of stocks" [stock_input]="acao"></app-stock-card>
+
 </div>
+<!-- Troquei os nomes para entender melhor as referências de objeto e de iteração for -->
+<!-- stock_input foi é nosso objeto instanciado no stock-card.ts, ele recebe a acao contida na lista de stocks
+definida no dashboard-page.ts -->

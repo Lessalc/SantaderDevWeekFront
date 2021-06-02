@@ -14,7 +14,9 @@ export class DashboardService {
   async getStocks(): Promise<Stock[]>{
     /* vamos criar uma variável com nosso URL.
     Resumidamente, var diferencia de let ou const por não respeitar o escopo de onde se encontra
-    assim, um var foo dentro de um if é visto fora dele, mas um let ou const foo não é visto por fora*/
-    return this.http.get<Stock>(`${this.baseUrl}/stock`).toPromise();
+    assim, um var foo dentro de um if é visto fora dele, mas um let ou const foo não é visto por fora.
+    -- Aqui usamos também uma String interpolation, oq vem dentro do ${} é uma variável, definida acima
+    e acrescentamos um path final para essa função*/
+    return this.http.get<Stock[]>(`${this.baseUrl}/stock`).toPromise();
   }
 }
